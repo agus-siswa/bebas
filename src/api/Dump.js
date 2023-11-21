@@ -32,4 +32,9 @@ const Dump = {
   }
 }
 
+/**
+ * var str = "hello, world!";
+
+ */
+
 export default Dump
