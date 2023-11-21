@@ -8,14 +8,22 @@ export const DefaultText = () => {
 }
 
 export const Text = ({
-    title
+    title,
+    type="text",
+    required
 }) => {
     return (
         <div className="mb-2">
-            <div className="text-slate-700 pl-[3px] mb-1 text-sm">{
-                title
-            }</div>
-            <input type="text" className="rounded-md bg-slate-100 focus:ring-[0px] text-sm focus:border-slate-300 border-[1px] border-slate-200 w-full " />
+            <div className="text-slate-700 pl-[3px] mb-1 text-sm">
+                { title }
+                {
+                    required ? 
+                        <span className="text-red-500">*</span>
+                    : 
+                        null
+                }
+            </div>
+            <input type={ type } className="rounded-md bg-slate-100 focus:ring-[0px] text-sm focus:border-slate-300 border-[1px] border-slate-200 w-full " />
         </div>
     )
 }
